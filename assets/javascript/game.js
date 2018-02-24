@@ -5,6 +5,7 @@ $(document).ready(function () {
     var losses;
     var crystalValue = [0, 0, 0, 0];
 
+
     function randomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -30,16 +31,28 @@ $(document).ready(function () {
     }
 
     function buttonClicked(){
+        var clickAudio = document.createElement("audio");
+        clickAudio.setAttribute("src", "./assets/sounds/click.mp3");
+        clickAudio.play();
+
         $("#score").text(score);
         if (score === goal){
             wins++;
             initGame();
             $("#youwin").text("You Win!");
+
+            var audio = document.createElement("audio");
+            audio.setAttribute("src", "./assets/sounds/correct.wav");
+            audio.play();
         }
         else if (score > goal){
             losses++;
             initGame();
             $("#youwin").text("You Lost!");
+
+            var audio = document.createElement("audio");
+            audio.setAttribute("src", "./assets/sounds/wrong.wav");
+            audio.play();
         }
         else {
             $("#youwin").text("");
