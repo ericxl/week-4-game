@@ -1,0 +1,27 @@
+.color-chocolate {
+    background-color: chocolate
+}
+
+.color-wheat {
+    background-color: wheat
+}
+
+.color-wheat p{
+    color: green
+}
+
+.color-green{
+    background-color:green
+}
+
+.color-cyan {
+    background-color:cyan
+}
+
+.color-royalblue {
+    background-color: royalblue
+}
+
+.color-royalblue h2, .color-royalblue p{
+    color: white
+}
